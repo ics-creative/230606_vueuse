@@ -1,7 +1,7 @@
 import { reactive } from "vue";
 
 /**
- * カウンター
+ * カウンターをComposite APIで実装したもの
  */
 export const useCounter = () => {
   const state = reactive({ count: 0 });

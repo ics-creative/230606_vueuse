@@ -6,6 +6,7 @@ const { x, y } = useMouse();
 
 <template>
   <div>
+    <h1>useMouse()のデモ</h1>
     <p>マウスの座標は、x: {{ x }}, y: {{ y }}です。</p>
   </div>
 </template>

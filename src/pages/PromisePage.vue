@@ -50,6 +50,7 @@ const address = computedAsync(
 
 <template>
   <div>
+    <h1>非同期処理のデモ</h1>
     <p>num: {{ num }}</p>
     <h2>computedを用いた例</h2>
     <p>doublePromise: {{ doublePromise1 }}</p>

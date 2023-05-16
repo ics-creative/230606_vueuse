@@ -6,6 +6,7 @@ const { state, increment } = useCounter();
 
 <template>
   <div>
+    <h1>カウンターのデモ</h1>
     <button @click="increment">
       {{ state.count }}
     </button>

@@ -6,8 +6,10 @@ import Clipboard from "./pages/Clipboard.vue";
 import PromisePage from "./pages/PromisePage.vue";
 import Utils from "./pages/Utils.vue";
 
+const base = import.meta.env.BASE_URL;
+
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(base),
   routes: [
     { path: "/", component: Home },
     { path: "/count", component: Count },

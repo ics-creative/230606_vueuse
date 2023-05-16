@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useCounter } from "../composable/useCounter";
 
 const { state, increment } = useCounter();

@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "./pages/Home.vue";
 import Count from "./pages/Count.vue";
-import DialogPage from "./pages/DialogPage.vue";
-import Poke from "./pages/Poke.vue";
 import Mouse from "./pages/Mouse.vue";
 import Clipboard from "./pages/Clipboard.vue";
+import PromisePage from "./pages/PromisePage.vue";
+import Utils from "./pages/Utils.vue";
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -13,6 +13,7 @@ export const router = createRouter({
     { path: "/count", component: Count },
     { path: "/mouse", component: Mouse },
     { path: "/clipboard", component: Clipboard },
-    { path: "/poke", component: Poke },
+    { path: "/promise", component: PromisePage },
+    { path: "/utils", component: Utils },
   ],
 });

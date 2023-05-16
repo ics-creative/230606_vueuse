@@ -8,8 +8,9 @@ const { text, copy, copied } = useClipboard({ source });
 
 <template>
   <div>
-    <input v-model="text" />
-    <button @click="copy">コピー</button>
+    <input v-model="source" />
+    <button @click="copy(source)">コピー</button>
+    <p>コピーしたテキスト: {{ text }}</p>
     <p v-if="copied">コピーしました</p>
   </div>
 </template>

@@ -1,13 +1,15 @@
-<script setup lang="ts">
+<script setup>
 import { useCounter } from "../composable/useCounter";
 
 const { state, increment } = useCounter();
 </script>
 
 <template>
-  <button @click="increment">
-    {{ state.count }}
-  </button>
+  <div>
+    <button @click="increment">
+      {{ state.count }}
+    </button>
+  </div>
 </template>
 
 <style scoped lang="scss"></style>

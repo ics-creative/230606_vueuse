@@ -1,5 +1,8 @@
 import { reactive } from "vue";
 
+/**
+ * カウンター
+ */
 export const useCounter = () => {
   const state = reactive({ count: 0 });
 

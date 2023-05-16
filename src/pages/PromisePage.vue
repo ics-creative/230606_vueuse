@@ -43,7 +43,8 @@ const address = computedAsync(
     const result = results[0];
     return result.address1 + result.address2 + result.address3;
   },
-  "住所が見つかりませんでした",
+  // 初期値
+  "",
   evaluating
 );
 </script>

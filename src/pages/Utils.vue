@@ -7,8 +7,15 @@ import {
 } from "@vueuse/core";
 import { ref } from "vue";
 
+/**
+ * リアクティブにウィンドウサイズを取得する処理
+ */
 const { width, height } = useWindowSize();
+
 const isReady = ref(false);
+/**
+ * isReadyをtrueにした1秒後にisReadyをfalseにする処理
+ */
 const timeout = async () => {
   isReady.value = true;
   await promiseTimeout(1000);

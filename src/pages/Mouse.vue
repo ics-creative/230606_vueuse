@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useMouse } from "@vueuse/core";
 
+/**
+ * リアクティブにマウスの座標を取得する処理
+ */
 const { x, y } = useMouse();
 </script>
 

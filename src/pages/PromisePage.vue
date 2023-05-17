@@ -4,21 +4,21 @@ import { computedAsync } from "@vueuse/core";
 
 const num = ref(1);
 
-const doublePromise1 = computed(() => {
-  return new Promise((resolve) => {
+const doublePromise1 = computed(async () => {
+  return await new Promise((resolve) => {
     setTimeout(() => {
       resolve(num.value * 2);
-    }, 1000);
+    }, 3000);
   });
 });
 
 const doublePromise2 = computedAsync(async () => {
-  return new Promise((resolve) => {
+  return await new Promise((resolve) => {
     setTimeout(() => {
       resolve(num.value * 2);
-    }, 1000);
+    }, 3000);
   });
-});
+}, "計算中...");
 
 /**
  * 郵便番号から住所を取得する例です

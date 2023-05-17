@@ -52,13 +52,13 @@ const address = computedAsync(
 
 <template>
   <div>
-    <h1>非同期処理のデモ</h1>
-    <p>num: {{ num }}</p>
-    <h2>computedを用いた例</h2>
-    <p>doublePromise1: {{ doublePromise1 }}</p>
-    <h2>computedAsyncを用いた例</h2>
-    <p>doublePromise2: {{ doublePromise2 }}</p>
-    <h2>郵便番号から住所を取得する例</h2>
+    <h1>非同期なリアクティブ値のデモ</h1>
+<!--    <p>num: {{ num }}</p>-->
+<!--    <h2>computedを用いた例</h2>-->
+<!--    <p>doublePromise1: {{ doublePromise1 }}</p>-->
+<!--    <h2>computedAsyncを用いた例</h2>-->
+<!--    <p>doublePromise2: {{ doublePromise2 }}</p>-->
+<!--    <h2>郵便番号から住所を取得する例</h2>-->
     <input type="text" v-model="postalCode" placeholder="7桁の郵便番号を入力" />
     <p v-show="evaluating">取得中...</p>
     <p v-show="!evaluating">{{ address }}</p>

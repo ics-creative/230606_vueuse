@@ -1,17 +1,16 @@
-import { reactive } from "vue";
+import { ref } from "vue";
 
 /**
  * カウンターをComposite APIで実装したもの
  */
 export const useCounter = () => {
-  const state = reactive({ count: 0 });
-
+  const count = ref(0);
   const increment = () => {
-    state.count++;
+    count.value++;
   };
 
   return {
-    state,
+    count,
     increment,
   };
 };

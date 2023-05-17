@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "./pages/Home.vue";
 import Count from "./pages/Count.vue";
 import Mouse from "./pages/Mouse.vue";
@@ -9,7 +9,7 @@ import Utils from "./pages/Utils.vue";
 const base = import.meta.env.BASE_URL;
 
 export const router = createRouter({
-  history: createWebHistory(base),
+  history: createWebHashHistory(base),
   routes: [
     { path: "/", component: Home },
     { path: "/count", component: Count },

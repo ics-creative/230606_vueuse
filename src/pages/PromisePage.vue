@@ -4,6 +4,7 @@ import { computedAsync } from "@vueuse/core";
 
 const num = ref(1);
 
+// ❌computedはPromiseを解決しない！
 const doublePromise1 = computed(async () => {
   return await new Promise((resolve) => {
     setTimeout(() => {
@@ -37,7 +38,7 @@ const address = computedAsync(
     const res = await fetch(url);
     const json = await res.json();
     const results = json.results;
-    if (json.results === null) {
+    if (results === null) {
       return "住所が見つかりませんでした";
     }
     const result = results[0];

@@ -13,13 +13,19 @@ const doublePromise1 = computed(async () => {
   });
 });
 
-const doublePromise2 = computedAsync(async () => {
-  return await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(num.value * 2);
-    }, 3000);
-  });
-}, "計算中...");
+const evaluating2 = ref(false);
+
+const doublePromise2 = computedAsync(
+  async () => {
+    return await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(num.value * 2);
+      }, 3000);
+    });
+  },
+  "計算中...",
+  evaluating2
+);
 
 /**
  * 郵便番号から住所を取得する例です
@@ -53,16 +59,54 @@ const address = computedAsync(
 <template>
   <div>
     <h1>非同期なリアクティブ値のデモ</h1>
-<!--    <p>num: {{ num }}</p>-->
-<!--    <h2>computedを用いた例</h2>-->
-<!--    <p>doublePromise1: {{ doublePromise1 }}</p>-->
-<!--    <h2>computedAsyncを用いた例</h2>-->
-<!--    <p>doublePromise2: {{ doublePromise2 }}</p>-->
-<!--    <h2>郵便番号から住所を取得する例</h2>-->
+    <!--    <p>num: {{ num }}</p>-->
+    <!--    <h2>computedを用いた例</h2>-->
+    <!--    <p>doublePromise1: {{ doublePromise1 }}</p>-->
+    <!--    <h2>computedAsyncを用いた例</h2>-->
+    <!--    <p>-->
+    <!--      doublePromise2:-->
+    <!--      <span :class="{ evaluating: evaluating2 }">{{ doublePromise2 }}</span>-->
+    <!--    </p>-->
+    <!--    <div class="indicator"></div>-->
+    <h2>郵便番号から住所を取得する例</h2>
     <input type="text" v-model="postalCode" placeholder="7桁の郵便番号を入力" />
     <p v-show="evaluating">取得中...</p>
     <p v-show="!evaluating">{{ address }}</p>
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.indicator {
+  width: 200px;
+  height: 4px;
+  background-color: #4bff00;
+  animation: load 3s linear forwards;
+}
+
+@keyframes load {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.evaluating {
+  animation: flash 1s linear infinite;
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+</style>

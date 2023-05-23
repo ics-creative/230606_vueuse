@@ -7,9 +7,7 @@ const { count, increment } = useCounter();
 <template>
   <div>
     <h1>カウンターのデモ</h1>
-    <button @click="increment">
-      {{ count }}
-    </button>
+    <button @click="increment">Clicked {{ count }} times</button>
   </div>
 </template>
 

@@ -67,7 +67,6 @@ const address = computedAsync(
     <!--      doublePromise2:-->
     <!--      <span :class="{ evaluating: evaluating2 }">{{ doublePromise2 }}</span>-->
     <!--    </p>-->
-    <!--    <div class="indicator"></div>-->
     <h2>郵便番号から住所を取得する例</h2>
     <input type="text" v-model="postalCode" placeholder="7桁の郵便番号を入力" />
     <p v-show="evaluating">取得中...</p>
@@ -76,22 +75,6 @@ const address = computedAsync(
 </template>
 
 <style scoped lang="scss">
-.indicator {
-  width: 200px;
-  height: 4px;
-  background-color: #4bff00;
-  animation: load 3s linear forwards;
-}
-
-@keyframes load {
-  0% {
-    width: 200px;
-  }
-  100% {
-    width: 0;
-  }
-}
-
 .evaluating {
   animation: flash 1s linear infinite;
 }

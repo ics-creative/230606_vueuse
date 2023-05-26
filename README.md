@@ -1,7 +1,7 @@
-5月19日公開 ICS MEDIA記事「VueUseで学ぶ、Composition API」のサンプルです
+2023年6月6日公開 ICS MEDIA 記事「VueUse で学ぶ、Composition API」のサンプルです
 
-1. [カウンターのデモ](http://localhost:5173/230516_vueuse/#/count)
-2. [useMouse()のデモ](http://localhost:5173/230516_vueuse/#/mouse)
-3. [useClipboard()のデモ](http://localhost:5173/230516_vueuse/#/clipboard)
-4. [非同期なリアクティブ値のデモ](http://localhost:5173/230516_vueuse/#/promise)
-5. [汎用関数のデモ](http://localhost:5173/230516_vueuse/#/utils)
+1. [カウンターのデモ](https://ics-creative.github.io/230606_vueuse/#/count)
+2. [useMouse()のデモ](https://ics-creative.github.io/230606_vueuse/#/mouse)
+3. [useClipboard()のデモ](https://ics-creative.github.io/230606_vueuse/#/clipboard)
+4. [非同期なリアクティブ値のデモ](https://ics-creative.github.io/230606_vueuse/#/promise)
+5. [汎用関数のデモ](https://ics-creative.github.io/230606_vueuse/#/utils)
